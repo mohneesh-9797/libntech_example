@@ -1,0 +1,16 @@
+# Autotools:
+/autom4te.cache/
+/build-aux/
+/src/.deps/
+/src/.dirstamp
+/src/*.o
+/aclocal.m4
+/argv_printer
+/config.h
+/config.h.in
+/config.log
+/config.status
+/configure
+/Makefile
+/Makefile.in
+/stamp-h1
