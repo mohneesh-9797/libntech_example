@@ -8,6 +8,7 @@ AC_CONFIG_AUX_DIR([build-aux])
 AM_INIT_AUTOMAKE([1.11 -Wall -Werror foreign subdir-objects])
 AC_CONFIG_FILES([Makefile])
 AC_PROG_CC
+AC_CONFIG_MACRO_DIR([m4])
 
 # Add more here
 
