@@ -5,7 +5,7 @@
 /src/.dirstamp
 /src/*.o
 /aclocal.m4
-/m4/pkg.m4
+/m4/*.m4
 /*.tar.gz
 /argv_printer
 /custom_config.h
