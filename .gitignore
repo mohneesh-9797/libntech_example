@@ -8,8 +8,8 @@
 /m4/pkg.m4
 /*.tar.gz
 /argv_printer
-/config.h
-/config.h.in
+/custom_config.h
+/custom_config.h.in
 /config.log
 /config.status
 /configure
