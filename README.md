@@ -1,4 +1,7 @@
-# libutils example
+# libutils Example Project
+
+[libutils](https://github.com/olehermanse/libutils/) is a lightweight C library used in CFEngine.
+This example project shows a minimal autotools setup, using libutils as a git submodule.
 
 ## Instructions
 
@@ -40,3 +43,10 @@ $ ls -al argv_printer*
 ```
 
 (In this simple test, the library added 2K to file size).
+
+# Authors
+
+CFEngine was originally created by Mark Burgess with many contributions from around the world.
+Thanks [everyone](https://github.com/cfengine/core/blob/master/AUTHORS)!
+
+[CFEngine](https://cfengine.com) is sponsored by [Northern.tech AS](https://northern.tech)
