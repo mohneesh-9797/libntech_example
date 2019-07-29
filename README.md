@@ -1,6 +1,6 @@
 # libutils Example Project
 
-[libutils](https://github.com/olehermanse/libutils/) is a lightweight C library used in CFEngine.
+[libutils](https://github.com/cfengine/libutils/) is a lightweight C library used in CFEngine.
 This example project shows a minimal autotools setup, using libutils as a git submodule.
 
 ## Instructions
@@ -8,7 +8,7 @@ This example project shows a minimal autotools setup, using libutils as a git su
 ### Download
 
 ```
-$ git clone https://github.com/olehermanse/libutils_example.git
+$ git clone https://github.com/cfengine/libutils_example.git
 $ cd libutils_example
 $ git submodule init
 $ git submodule update
