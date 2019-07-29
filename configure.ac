@@ -12,6 +12,29 @@ AC_CONFIG_FILES([Makefile])
 AC_PROG_CC
 AC_CONFIG_MACRO_DIR([m4])
 
-# Add more here
+STRIP_FLAGS=""
+
+case "$target_os" in
+   linux*|*bsd*|*gnu*)
+        STRIP_FLAGS="-Wl,--gc-sections"
+        ;;
+   freebsd*|dragonfly*)
+        ;;
+   openbsd*|obsd*)
+        ;;
+   cygwin*)
+        ;;
+   mingw*)
+        ;;
+   darwin*)
+        STRIP_FLAGS="-Wl,-dead_strip"
+        ;;
+   *)
+        AC_MSG_ERROR(Unknown system type $target_os)
+        ;;
+esac
+
+
+AC_SUBST([STRIP_FLAGS])
 
 AC_OUTPUT
