@@ -1,7 +1,7 @@
 #include <sequence.h> // Seq
 #include <stdio.h> // printf()
 
-int main(int argc, char **argv)
+int main(int argc, const char *const *argv)
 {
     Seq *seq = SeqFromArgv(argc, argv);
     size_t length = SeqLength(seq);
