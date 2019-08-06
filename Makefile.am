@@ -21,8 +21,8 @@ argv_printer_zero_SOURCES = \
 	src/argv_lib.c \
 	src/argv_printer.c
 
-argv_printer_zero_CFLAGS = -Os -fdata-sections -ffunction-sections $(STRIP_FLAGS)
-argv_printer_zero_LDFLAGS = -Os -fdata-sections -ffunction-sections $(STRIP_FLAGS)
+argv_printer_zero_CFLAGS = -Os -fdata-sections -ffunction-sections
+argv_printer_zero_LDFLAGS = $(STRIP_LDFLAGS)
 
 argv_printer_libs_SOURCES = \
 	src/argv_lib.c \
@@ -30,5 +30,5 @@ argv_printer_libs_SOURCES = \
 
 argv_printer_libs_LDADD = libutils/libutils/.libs/libutils.la
 argv_printer_libs_CPPFLAGS = -I libutils/libutils/ -I libutils/libcompat/
-argv_printer_libs_CFLAGS = -Os -fdata-sections -ffunction-sections $(STRIP_FLAGS)
-argv_printer_libs_LDFLAGS = -Os -fdata-sections -ffunction-sections $(STRIP_FLAGS)
+argv_printer_libs_CFLAGS = -Os -fdata-sections -ffunction-sections
+argv_printer_libs_LDFLAGS = $(STRIP_LDFLAGS)

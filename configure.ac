@@ -12,11 +12,11 @@ AC_CONFIG_FILES([Makefile])
 AC_PROG_CC
 AC_CONFIG_MACRO_DIR([m4])
 
-STRIP_FLAGS=""
+STRIP_LDFLAGS=""
 
 case "$target_os" in
    linux*|*bsd*|*gnu*)
-        STRIP_FLAGS="-Wl,--gc-sections"
+        STRIP_LDFLAGS="-Wl,--gc-sections"
         ;;
    freebsd*|dragonfly*)
         ;;
@@ -27,7 +27,7 @@ case "$target_os" in
    mingw*)
         ;;
    darwin*)
-        STRIP_FLAGS="-Wl,-dead_strip"
+        STRIP_LDFLAGS="-Wl,-dead_strip"
         ;;
    *)
         AC_MSG_ERROR(Unknown system type $target_os)
@@ -35,7 +35,7 @@ case "$target_os" in
 esac
 
 
-AC_SUBST([STRIP_FLAGS])
+AC_SUBST([STRIP_LDFLAGS])
 
 AC_CONFIG_SUBDIRS([libutils])
 

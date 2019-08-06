@@ -7,9 +7,10 @@
 /build-aux/
 /*.tar.gz
 /argv_printer
+/compile
+/config.cache
 /config.guess
 /config.sub
-/compile
 /config.log
 /config.status
 /configure
