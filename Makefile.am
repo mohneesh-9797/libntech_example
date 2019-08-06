@@ -7,6 +7,9 @@
 # is actually worse than linking to libutils.la and letting the compiler/linker
 # optimize for size and strip dead code.
 
+
+SUBDIRS = libutils
+
 ACLOCAL_AMFLAGS = -I m4 --install
 EXTRA_DIST = m4/NOTES
 

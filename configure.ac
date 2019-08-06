@@ -37,4 +37,6 @@ esac
 
 AC_SUBST([STRIP_FLAGS])
 
+AC_CONFIG_SUBDIRS([libutils])
+
 AC_OUTPUT

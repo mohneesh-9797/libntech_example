@@ -1,2 +1,2 @@
 autoreconf -i ./
-./configure
+./configure $@
