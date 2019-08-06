@@ -7,28 +7,37 @@
 # is actually worse than linking to libutils.la and letting the compiler/linker
 # optimize for size and strip dead code.
 
-
+# Run make inside libutils as well:
 SUBDIRS = libutils
 
+# Look for macros inside m4 directory:
 ACLOCAL_AMFLAGS = -I m4 --install
+
+# "Trick" to ensure m4 directory exists in source tarballs:
 EXTRA_DIST = m4/NOTES
 
 bin_PROGRAMS = \
 	argv_printer_zero \
 	argv_printer_libs # Equal length file name for fair comparison
 
+# An example target with no dependencies, for comparison:
 argv_printer_zero_SOURCES = \
 	src/argv_lib.c \
 	src/argv_printer.c
 
+# Optimize for binary size and strip dead code:
 argv_printer_zero_CFLAGS = -Os -fdata-sections -ffunction-sections
-argv_printer_zero_LDFLAGS = $(STRIP_LDFLAGS)
+argv_printer_zero_LDFLAGS = $(STRIP_LDFLAGS) # Platform specific
 
+# An example target using sequnce data structure from libutils:
 argv_printer_libs_SOURCES = \
 	src/argv_lib.c \
 	src/argv_printer_seq.c
 
+# Statically link to libutils:
 argv_printer_libs_LDADD = libutils/libutils/.libs/libutils.la
+# Tell the c preprocessor (CPP) where to find headers:
 argv_printer_libs_CPPFLAGS = -I libutils/libutils/ -I libutils/libcompat/
+# Optimize for binary size and strip dead code:
 argv_printer_libs_CFLAGS = -Os -fdata-sections -ffunction-sections
-argv_printer_libs_LDFLAGS = $(STRIP_LDFLAGS)
+argv_printer_libs_LDFLAGS = $(STRIP_LDFLAGS) # Platform specific
