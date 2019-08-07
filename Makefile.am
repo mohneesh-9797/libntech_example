@@ -8,7 +8,7 @@
 # optimize for size and strip dead code.
 
 # Run make inside libutils as well:
-SUBDIRS = libutils
+SUBDIRS = libntech
 
 # Look for macros inside m4 directory:
 ACLOCAL_AMFLAGS = -I m4 --install
@@ -35,9 +35,9 @@ argv_printer_libs_SOURCES = \
 	src/argv_printer_seq.c
 
 # Statically link to libutils:
-argv_printer_libs_LDADD = libutils/libutils/.libs/libutils.la
+argv_printer_libs_LDADD = libntech/libutils/.libs/libutils.la
 # Tell the c preprocessor (CPP) where to find headers:
-argv_printer_libs_CPPFLAGS = -I libutils/libutils/ -I libutils/libcompat/
+argv_printer_libs_CPPFLAGS = -I libntech/libutils/ -I libntech/libcompat/
 # Optimize for binary size and strip dead code:
 argv_printer_libs_CFLAGS = -Os -fdata-sections -ffunction-sections
 argv_printer_libs_LDFLAGS = $(STRIP_LDFLAGS) # Platform specific

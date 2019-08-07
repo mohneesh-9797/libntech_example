@@ -14,7 +14,7 @@ LT_INIT
 
 # Check that sources are available:
 AC_CONFIG_SRCDIR([src/argv_printer.c])
-AC_CONFIG_SRCDIR([libutils/libutils/sequence.c])
+AC_CONFIG_SRCDIR([libntech/libutils/sequence.c])
 # If sequence.c is not there, it probably means git submodule is missing
 
 # We generate custom_config.h instead of default (config.h),
@@ -63,7 +63,7 @@ esac
 
 AC_SUBST([STRIP_LDFLAGS]) # Substitutes the variable in Makefile.am
 
-# Run autoconf/configure in libutils, generating necessary makefiles:
-AC_CONFIG_SUBDIRS([libutils])
+# Run autoconf/configure in libntech, generating necessary makefiles:
+AC_CONFIG_SUBDIRS([libntech])
 
 AC_OUTPUT

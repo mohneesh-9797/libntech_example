@@ -1,15 +1,15 @@
-# libutils Example Project
+# libntech Example Project
 
-[libutils](https://github.com/cfengine/libutils/) is a lightweight C library used in CFEngine.
-This example project shows a minimal autotools setup, using libutils as a git submodule.
+[libntech](https://github.com/cfengine/libntech/) is a lightweight C library used in CFEngine.
+This example project shows a minimal autotools setup, using libntech as a git submodule.
 
 ## Instructions
 
 ### Download
 
 ```
-$ git clone https://github.com/cfengine/libutils_example.git
-$ cd libutils_example
+$ git clone https://github.com/cfengine/libntech_example.git
+$ cd libntech_example
 $ git submodule init
 $ git submodule update
 ```
@@ -17,7 +17,7 @@ $ git submodule update
 ### Build dependency
 
 ```
-$ cd libutils
+$ cd libntech
 $ git fetch --all --tags
 $ ./autogen.sh
 $ make -j32
@@ -33,7 +33,7 @@ $ make -j32
 ## File size
 
 Currently, the project has 2 versions of the same example - a program which prints `argv`.
-One uses the `Seq` data structure from libutils (and allocation functions), the other does not use libutils at all.
+One uses the `Seq` data structure from libntech (and allocation functions), the other does not use libntech at all.
 After building with the steps above, you can compare the file size:
 
 ```
