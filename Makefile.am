@@ -32,7 +32,7 @@ argv_printer_zero_LDFLAGS = $(STRIP_LDFLAGS) # Platform specific
 # An example target using sequnce data structure from libutils:
 argv_printer_libs_SOURCES = \
 	src/argv_lib.c \
-	src/argv_printer_seq.c
+	src/argv_printer_libs.c
 
 # Statically link to libutils:
 argv_printer_libs_LDADD = libntech/libutils/.libs/libutils.la
