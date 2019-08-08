@@ -13,7 +13,6 @@ AM_PROG_AR # libtool needs archiver program
 LT_INIT
 
 # Check that sources are available:
-AC_CONFIG_SRCDIR([src/argv_printer.c])
 AC_CONFIG_SRCDIR([libntech/libutils/sequence.c])
 # If sequence.c is not there, it probably means git submodule is missing
 
