@@ -23,7 +23,7 @@ bin_PROGRAMS = \
 # An example target with no dependencies, for comparison:
 argv_printer_zero_SOURCES = \
 	src/argv_lib.c \
-	src/argv_printer.c
+	src/argv_printer_zero.c
 
 # Optimize for binary size and strip dead code:
 argv_printer_zero_CFLAGS = -Os -fdata-sections -ffunction-sections
