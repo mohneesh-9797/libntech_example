@@ -2,11 +2,13 @@
 /aclocal.m4
 /autom4te.cache/
 /ar-lib
+/argv_printer/.deps/
+/argv_printer/.dirstamp
+/argv_printer/*.o
 /argv_printer_libs
 /argv_printer_zero
 /build-aux/
 /*.tar.gz
-/argv_printer
 /compile
 /config.cache
 /config.guess
@@ -24,7 +26,4 @@
 /Makefile.in
 /missing
 /m4/*.m4
-/src/.deps/
-/src/.dirstamp
-/src/*.o
 /stamp-h1
