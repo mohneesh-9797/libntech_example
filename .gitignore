@@ -1,17 +1,30 @@
-# Autotools:
-/aclocal.m4
+# File names:
+.dirstamp
+
+# Directory names:
+.deps/
+.libs/
+
+# File extensions:
+*.o
+*.tar.gz
+*.la
+*.lo
+*.gcno
+*.log
+*.m4
+
+# Absolute paths:
 /autom4te.cache/
 /ar-lib
-/argv_printer/.deps/
-/argv_printer/.dirstamp
-/argv_printer/*.o
 /argv_printer_libs
 /argv_printer_zero
 /build-aux/
-/*.tar.gz
 /compile
 /config.cache
 /config.guess
+/config.h
+/config.h.in
 /config.sub
 /config.log
 /config.status
@@ -25,5 +38,9 @@
 /Makefile
 /Makefile.in
 /missing
-/m4/*.m4
 /stamp-h1
+/test-driver
+/tests/unit/Makefile
+/tests/unit/Makefile.in
+/tests/unit/test_argv_lib
+/tests/unit/test_argv_lib.trs
