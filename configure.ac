@@ -16,9 +16,8 @@ LT_INIT
 AC_CONFIG_SRCDIR([libntech/libutils/sequence.c])
 # If sequence.c is not there, it probably means git submodule is missing
 
-# We generate custom_config.h instead of default (config.h),
-# this is to avoid collision with libutils/config.h:
-AC_CONFIG_HEADERS([custom_config.h])
+# If you want to have a unique name or location for config.h, edit here:
+AC_CONFIG_HEADERS([config.h])
 
 # Initialize automake with a string of options (explained below):
 AM_INIT_AUTOMAKE([1.11 -Wall -Werror foreign subdir-objects])
