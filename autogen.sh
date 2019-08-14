@@ -7,9 +7,5 @@ if [ ! -f libntech/libutils/sequence.h ] ; then
     exit 1
 fi
 
-# Determine version of libntech (TOOD: Remove)
-( cd libntech && misc/determine-version.py > CFVERSION ) \
-    || { echo "$0: Unable to auto-detect libntech version" ; exit 1 ; }
-
 autoreconf -i ./
 ./configure $@
