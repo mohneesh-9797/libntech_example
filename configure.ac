@@ -36,6 +36,10 @@ AC_PROG_CC
 # Use the m4 directory for m4 macros (convention):
 AC_CONFIG_MACRO_DIR([m4])
 
+# cmocka is a cmake project, but we don't have to run cmake, we can just
+# make sure our config.h file has the neccessary HAVE_MALLOC_H etc.:
+AC_CHECK_HEADERS([malloc.h inttypes.h signal.h strings.h])
+
 # Platform specific linker flags for stripping dead code:
 STRIP_LDFLAGS=""
 
