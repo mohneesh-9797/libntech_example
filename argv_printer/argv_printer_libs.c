@@ -1,5 +1,5 @@
 #include <sequence.h> // Seq
-#include <stdio.h> // printf()
+#include <stdio.h>    // printf()
 
 int main(int argc, const char *const *argv)
 {
@@ -8,7 +8,7 @@ int main(int argc, const char *const *argv)
     assert(length == argc);
     for (int i = 0; i < length; ++i)
     {
-        printf("argv[%zu]: '%s'\n", length, SeqAt(seq, i));
+        printf("argv[%zu]: '%s'\n", length, (const char *) SeqAt(seq, i));
     }
     return 0;
 }
