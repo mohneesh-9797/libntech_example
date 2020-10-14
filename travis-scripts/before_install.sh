@@ -21,6 +21,9 @@ else
     sudo apt-get --quiet update
     # Needed to build
     sudo apt-get install -y libssl-dev libpam0g-dev
+    if [ `uname -m` = 'aarch64' ]; then
+        sudo apt-get install -y libpcre3 libpcre3-dev
+    fi
     sudo apt-get install -y liblmdb-dev
     # Needed to test
     sudo apt-get install -y fakeroot
