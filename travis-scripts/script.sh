@@ -3,7 +3,6 @@ set -e
 set -x
 
 cd $TRAVIS_BUILD_DIR || exit 1
-sudo apt-get install -y libpcre3 libpcre3-dev
 if [ "$TRAVIS_OS_NAME" = osx ]
 then
     ./autogen.sh --enable-debug
